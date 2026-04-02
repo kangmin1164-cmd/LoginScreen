@@ -6,5 +6,30 @@ namespace LoginScreen
         {
             InitializeComponent();
         }
+
+        private void txtID_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPW_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPW_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

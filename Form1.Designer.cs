@@ -28,12 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            lalAppName = new Label();
+            btnLogin = new Button();
+            txtID = new TextBox();
+            txtPW = new TextBox();
+            SuspendLayout();
+            // 
+            // lalAppName
+            // 
+            lalAppName.AutoSize = true;
+            lalAppName.Font = new Font("Trebuchet MS", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lalAppName.Location = new Point(315, 33);
+            lalAppName.Name = "lalAppName";
+            lalAppName.Size = new Size(171, 70);
+            lalAppName.TabIndex = 0;
+            lalAppName.Text = "Login";
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = Color.FromArgb(128, 255, 255);
+            btnLogin.Font = new Font("한컴 고딕", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnLogin.Location = new Point(318, 321);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(164, 64);
+            btnLogin.TabIndex = 1;
+            btnLogin.Text = "로그인";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // txtID
+            // 
+            txtID.Font = new Font("한컴 고딕", 20F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            txtID.Location = new Point(212, 146);
+            txtID.Name = "txtID";
+            txtID.PlaceholderText = "아이디";
+            txtID.Size = new Size(376, 59);
+            txtID.TabIndex = 2;
+            txtID.Enter += txtID_Enter;
+            txtID.Leave += txtID_Leave;
+            // 
+            // txtPW
+            // 
+            txtPW.Font = new Font("한컴 고딕", 20F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            txtPW.Location = new Point(212, 225);
+            txtPW.Name = "txtPW";
+            txtPW.PlaceholderText = "패스워드";
+            txtPW.Size = new Size(376, 59);
+            txtPW.TabIndex = 3;
+            txtPW.Enter += txtPW_Enter;
+            txtPW.Leave += txtPW_Leave;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(800, 450);
-            Text = "Form1";
+            Controls.Add(txtPW);
+            Controls.Add(txtID);
+            Controls.Add(btnLogin);
+            Controls.Add(lalAppName);
+            Name = "Form1";
+            Text = "Login Screen";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lalAppName;
+        private Button btnLogin;
+        private TextBox txtID;
+        private TextBox txtPW;
     }
 }
