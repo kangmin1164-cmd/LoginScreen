@@ -72,5 +72,27 @@ namespace LoginScreen
                 MessageBox.Show("로그인 실패~", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // 아이디 입력창에서 키를 눌렀을 때 실행
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            // 누른 키가 Enter 키인지 확인
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Enter 입력 시 발생하는 '띵' 소리 방지
+                txtPW.Focus();             // 커서를 비밀번호 입력창으로 이동
+            }
+        }
+
+        // 비밀번호 입력창에서 키를 눌렀을 때 실행
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            // 누른 키가 Enter 키인지 확인
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // '띵' 소리 방지
+                btnLogin.PerformClick();   // 로그인 버튼을 마우스로 클릭한 것과 동일하게 작동
+            }
+        }
     }
 }

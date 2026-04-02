@@ -65,6 +65,7 @@
             txtID.Size = new Size(376, 59);
             txtID.TabIndex = 2;
             txtID.Enter += txtID_Enter;
+            txtID.KeyDown += txtID_KeyDown;
             txtID.Leave += txtID_Leave;
             // 
             // txtPW
@@ -76,6 +77,7 @@
             txtPW.Size = new Size(376, 59);
             txtPW.TabIndex = 3;
             txtPW.Enter += txtPW_Enter;
+            txtPW.KeyDown += txtPW_KeyDown;
             txtPW.Leave += txtPW_Leave;
             // 
             // Form1
