@@ -37,10 +37,10 @@
             // lalAppName
             // 
             lalAppName.AutoSize = true;
-            lalAppName.Font = new Font("Trebuchet MS", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lalAppName.Location = new Point(315, 33);
+            lalAppName.Font = new Font("Trebuchet MS", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lalAppName.Location = new Point(291, 29);
             lalAppName.Name = "lalAppName";
-            lalAppName.Size = new Size(171, 70);
+            lalAppName.Size = new Size(219, 90);
             lalAppName.TabIndex = 0;
             lalAppName.Text = "Login";
             // 
