@@ -33,6 +33,9 @@
             txtID = new TextBox();
             txtPW = new TextBox();
             lblErrorMsg = new Label();
+            chkPWLook = new CheckBox();
+            btnCleanID = new Button();
+            btnCleanPW = new Button();
             SuspendLayout();
             // 
             // lalAppName
@@ -52,7 +55,7 @@
             btnLogin.Location = new Point(318, 321);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(164, 64);
-            btnLogin.TabIndex = 1;
+            btnLogin.TabIndex = 4;
             btnLogin.Text = "로그인";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -89,9 +92,46 @@
             lblErrorMsg.Location = new Point(212, 290);
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(385, 28);
-            lblErrorMsg.TabIndex = 4;
+            lblErrorMsg.TabIndex = 6;
             lblErrorMsg.Text = "아이디 또는 비밀번호가 잘못 되었습니다.";
             lblErrorMsg.Visible = false;
+            // 
+            // chkPWLook
+            // 
+            chkPWLook.AutoSize = true;
+            chkPWLook.Font = new Font("맑은 고딕", 16F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            chkPWLook.Location = new Point(556, 244);
+            chkPWLook.Name = "chkPWLook";
+            chkPWLook.Size = new Size(22, 21);
+            chkPWLook.TabIndex = 5;
+            chkPWLook.UseVisualStyleBackColor = true;
+            chkPWLook.CheckedChanged += chkPWLook_CheckedChanged;
+            // 
+            // btnCleanID
+            // 
+            btnCleanID.BackColor = Color.FromArgb(255, 192, 192);
+            btnCleanID.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnCleanID.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCleanID.Location = new Point(594, 159);
+            btnCleanID.Name = "btnCleanID";
+            btnCleanID.Size = new Size(44, 42);
+            btnCleanID.TabIndex = 6;
+            btnCleanID.Text = "X";
+            btnCleanID.UseVisualStyleBackColor = false;
+            btnCleanID.Click += btnCleanID_Click;
+            // 
+            // btnCleanPW
+            // 
+            btnCleanPW.BackColor = Color.FromArgb(255, 192, 192);
+            btnCleanPW.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnCleanPW.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCleanPW.Location = new Point(594, 238);
+            btnCleanPW.Name = "btnCleanPW";
+            btnCleanPW.Size = new Size(44, 42);
+            btnCleanPW.TabIndex = 7;
+            btnCleanPW.Text = "X";
+            btnCleanPW.UseVisualStyleBackColor = false;
+            btnCleanPW.Click += btnCleanPW_Click;
             // 
             // Form1
             // 
@@ -99,6 +139,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCleanPW);
+            Controls.Add(btnCleanID);
+            Controls.Add(chkPWLook);
             Controls.Add(lblErrorMsg);
             Controls.Add(txtPW);
             Controls.Add(txtID);
@@ -117,5 +160,8 @@
         private TextBox txtID;
         private TextBox txtPW;
         private Label lblErrorMsg;
+        private CheckBox chkPWLook;
+        private Button btnCleanID;
+        private Button btnCleanPW;
     }
 }

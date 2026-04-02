@@ -96,5 +96,32 @@ namespace LoginScreen
                 btnLogin.PerformClick();   // 로그인 버튼을 마우스로 클릭한 것과 동일하게 작동
             }
         }
+
+        // --- 추가된 기능: 개별 삭제 및 비밀번호 보기 ---
+
+        // 아이디 칸 전체 삭제 버튼
+        private void btnCleanID_Click(object sender, EventArgs e)
+        {
+            txtID.Clear();             // 텍스트 삭제
+            txtID_Leave(null, null);   // Leave 이벤트를 강제로 호출하여 "아이디" 힌트 복구
+        }
+
+        // 패스워드 칸 전체 삭제 버튼
+        private void btnCleanPW_Click(object sender, EventArgs e)
+        {
+            txtPW.Clear();             // 텍스트 삭제
+            txtPW_Leave(null, null);   // Leave 이벤트를 강제로 호출하여 "패스워드" 힌트 복구
+        }
+
+        // 패스워드 보기 체크박스 이벤트
+        private void chkPWLook_CheckedChanged(object sender, EventArgs e)
+        {
+            // 힌트 문구("패스워드")가 아닐 때만 글자 숨김/보임 처리
+            if (txtPW.Text != "패스워드")
+            {
+                // 체크되면 보이고(false), 체크 해제되면 가림(true)
+                txtPW.UseSystemPasswordChar = !chkPWLook.Checked;
+            }
+        }
     }
 }
