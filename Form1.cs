@@ -65,11 +65,13 @@ namespace LoginScreen
             // 저장된 정보와 입력된 정보를 비교하여 결과 출력
             if (inputID == myID && inputPW == myPW)
             {
+                lblErrorMsg.Visible = false;
                 MessageBox.Show("로그인 성공!", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("로그인 실패~", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblErrorMsg.Visible = true; //오류 발생시 오류라벨 보임
+                //MessageBox.Show("로그인 실패~", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
